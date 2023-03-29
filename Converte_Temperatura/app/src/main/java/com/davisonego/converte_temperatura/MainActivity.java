@@ -27,19 +27,18 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 float celsius = 0;
                 float far = 0;
-                try {
-                    celsius = Float.parseFloat(txtCelsius.getText().toString());
-                } catch (Exception e) {}
-                try {
-                    far = Float.parseFloat(txtFahrenheit.getText().toString());
-                } catch (Exception e) { }
-                if(celsius > 0 && far > 0) {}
-                else if(celsius > 0) {
-                    far = (float) ((celsius * 1.8) + 32);
-                    txtFahrenheit.setText(Float.toString(far));
-                } else if (far > 0) {
-                    celsius = (float) ((far - 32) / 1.8);
-                    txtCelsius.setText(Float.toString(celsius));
+                if(txtCelsius.getText().toString().isEmpty() ==true) {
+                    if(txtFahrenheit.getText().toString().isEmpty() == false) {
+                        far = Float.parseFloat(txtFahrenheit.getText().toString());
+                        celsius = (far-32)/(float)1.8;
+                    }
+                }
+
+                if(txtFahrenheit.getText().toString().isEmpty() ==true) {
+                    if(txtCelsius.getText().toString().isEmpty() == false) {
+                        celsius = Float.parseFloat(txtCelsius.getText().toString());
+                        far = (celsius * (float) 1.8) + 32;
+                    }
                 }
             }
         });

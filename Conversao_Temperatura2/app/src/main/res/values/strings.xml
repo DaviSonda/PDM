@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Conversao de Temperaturas v2</string>
+    <string name="rotulo1">Informe a temperatura</string>
+    <string name="rotulo2">Converter a Temperatura</string>
+    <string name="rotulo3">Fahrenheit</string>
+    <string name="rotulo4">Kelvin</string>
+    <string name="lblFar">Fahrenheit:</string>
+    <string name="lblKelvin">Kelvin:</string>
+
+</resources>
