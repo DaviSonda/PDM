@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Calculadora IMC</string>
+    <string name="peso">Peso</string>
+    <string name="altura">Altura</string>
+    <string name="calcular">Calcular</string>
+    <string name="lblImc">IMC:</string>
+    <string name="imc1">Abaixo do peso</string>
+    <string name="imc2">Normal</string>
+    <string name="imc3">Pre-obeso</string>
+    <string name="imc4">Obeso classe 1</string>
+    <string name="imc5">Obeso classe 2</string>
+    <string name="imc6">Obeso classe 3</string>
+</resources>
