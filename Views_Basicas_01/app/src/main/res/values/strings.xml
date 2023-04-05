@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">Views Básicas</string>
+    <string name="action_settings">Settings</string>
+
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+
+    <string name="tela_inicial">Selecione o Menu!</string>
+
+    <string name="menu01">Views Básicas</string>
+    <string name="menu02">Progress Bar</string>
+    <string name="menu03">Progress Bar Horizontal</string>
+    <string name="menu04">AutoComplete</string>
+    <string name="menu05">Date/Time Picker</string>
+    <string name="menu06">ListView</string>
+    <string name="menu07">Spinner</string>
+    <string name="menu08">LLAVO DEL OTCHO</string>
+    <string name="usuario">Usuário:</string>
+    <string name="senha">Senha:</string>
+    <string name="optOpcao1">Opção 1</string>
+    <string name="optOpcao2">Opção 2</string>
+
+    <string name="chkOpcao1">CheckBox</string>
+    <string name="chkOpcao2">CheckBox Estrela</string>
+
+    <string name="botao">Ok</string>
+    <string name="Rotulo1">Escolha um Contato</string>
+    <string name="title_activity_main">Views Básicas</string>
+    <string name="btnSave">Save</string>
+    <string name="btnOpen">Open</string>
+    <string name="btnSet">Setar Relógio</string>
+    <string name="set_date">Seta a Data</string>
+    <string name="set_time">Seta a Hora</string>
+    <string name="time_text">teste</string>
+    <string name="imageDesc1">Imagem 1</string>
+    <string name="chkAutoSave">Autosave</string>
+
+    <string-array name="array_presidentes">
+        <item>João Figueiredo</item>
+        <item>José Sarney</item>
+        <item>Fernando Collor de Mello</item>
+        <item>Itamar Franco</item>
+        <item>Fernando Henrique Cardoso</item>
+        <item>Luis Inácio da Silva</item>
+        <item>Dilma Roussef</item>
+        <item>Michel Temer</item>
+        <item>Jair Messias Bolsonaro</item>
+    </string-array>
+
+    <string name="title_activity_basic_views1">BasicViews1</string>
+    <string name="title_activity_basic_view8">basicView8</string>
+</resources>

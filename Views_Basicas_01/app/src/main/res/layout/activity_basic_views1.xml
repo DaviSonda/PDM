@@ -1,0 +1,142 @@
+
+<!--<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BasicViews1">
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:stretchColumns="1,2,3">
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_marginLeft="10dp"
+                android:text="@string/usuario" />
+
+            <EditText
+                android:id="@+id/txtUsuario"
+                android:layout_span="2"
+                android:gravity="right"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ems="10" >
+                <requestFocus />
+            </EditText>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_marginLeft="10dp"
+                android:text="@string/senha" />
+
+            <EditText
+                android:id="@+id/txtSenha"
+                android:gravity="right"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPassword"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <RadioGroup android:id="@+id/rdbGp1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <RadioButton
+                    android:id="@+id/rdbOpcao1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/optOpcao1" />
+
+                <RadioButton
+                    android:id="@+id/rdbOpcao2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/optOpcao2" />
+
+            </RadioGroup>
+
+            <CheckBox
+                android:id="@+id/chkOpcao1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="@string/chkOpcao1" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/btnBotao1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/botao" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageButton android:id="@+id/btnImg1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/imageDesc1"
+                android:src="@drawable/ic_launcher_foreground"
+                />
+            <CheckBox android:id="@+id/star"
+                style="?android:attr/starStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chkOpcao2"
+                />
+
+        </TableRow>
+
+
+
+    </TableLayout>
+
+</RelativeLayout>

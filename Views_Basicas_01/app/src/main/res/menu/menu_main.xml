@@ -1,0 +1,49 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.zampieri.views_basicas_01.MainActivity">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/menu01"
+        android:title="@string/menu01"
+        android:orderInCategory="100"
+        />
+
+    <item android:id="@+id/menu02"
+        android:title="@string/menu02"
+        android:orderInCategory="100"
+        />
+
+    <item android:id="@+id/menu03"
+        android:title="@string/menu03"
+        android:orderInCategory="100"
+        />
+
+    <item android:id="@+id/menu04"
+        android:title="@string/menu04"
+        android:orderInCategory="100"
+        />
+
+    <item android:id="@+id/menu05"
+        android:title="@string/menu05"
+        android:orderInCategory="100"
+        />
+
+    <item android:id="@+id/menu06"
+        android:title="@string/menu06"
+        android:orderInCategory="100"
+        />
+
+    <item android:id="@+id/menu07"
+        android:title="@string/menu07"
+        android:orderInCategory="100"
+        />
+    <item android:id="@+id/menu08"
+        android:title="@string/menu08"
+        android:orderInCategory="100"
+        />
+</menu>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Estados Brasileiros</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="bandeira">Bandeira</string>
+    <string name="estado">São Paulo - SP</string>
+    <string name="capital">São Paulo</string>
+    <string name="area">100000</string>
+</resources>
