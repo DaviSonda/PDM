@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditLivroActivity">
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textView1"
+                style="@style/LivroLabelTextView"
+                android:text="@string/rotuloTitulo"
+                android:textColor="@color/preto"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/lblTitulo"
+                style="@style/LivroTextView"
+                android:text="@string/titulo"
+                android:textColor="@color/preto"
+                android:textSize="20sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/LivroLabelTextView"
+                android:text="@string/rotuloEditora"
+                android:textColor="@color/preto"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/lblEditora"
+                style="@style/LivroTextView"
+                android:text="@string/editora"
+                android:textColor="@color/preto"
+                android:textSize="20sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/LivroLabelTextView"
+                android:text="@string/rotuloISBN"
+                android:textColor="@color/preto"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/lblISBN"
+                style="@style/LivroTextView"
+                android:text="@string/isbn"
+                android:textColor="@color/preto"
+                android:textSize="20sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
