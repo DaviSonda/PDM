@@ -2,4 +2,8 @@
     <string name="app_name">PetShop</string>
     <string name="btn_admin">Admin</string>
     <string name="btn_user">Normal User</string>
+    <string name="achado">Achados</string>
+    <string name="perdido">Perdidos</string>
+    <string name="sair">Sair</string>
+    <string name="add">Adicionar</string>
 </resources>

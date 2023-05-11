@@ -2,6 +2,7 @@ package com.davisonego.petshop;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -21,6 +22,7 @@ public class LoginActivity extends AppCompatActivity {
         } else if (view.getId() == R.id.btnAdmin) {
             file.WriteFile(this, fileName, "ADMIN");
         }
-        new HttpHelper().Get();
+        Intent intent = new Intent(getApplicationContext(), PerdidoActivity.class);
+        startActivity(intent);
     }
 }

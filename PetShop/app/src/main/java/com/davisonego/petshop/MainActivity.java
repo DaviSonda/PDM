@@ -34,5 +34,6 @@ public class MainActivity extends AppCompatActivity {
         //Inicia a tela de login
         Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
         startActivity(intent);
+        finish();
     }
 }
