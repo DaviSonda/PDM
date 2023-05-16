@@ -19,7 +19,7 @@ class NetworkTask extends AsyncTask<Void, Void, String> {
     protected String doInBackground(Void... params) {
         try {
             // create URL object
-            URL url = new URL("https://catfact.ninja/fact");
+            URL url = new URL("https://reqres.in/api/users?page=2");
 
             // create HttpURLConnection
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
