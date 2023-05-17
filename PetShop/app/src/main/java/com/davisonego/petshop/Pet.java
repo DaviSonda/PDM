@@ -19,16 +19,17 @@ public class Pet {
         return Titulo;
     }
 
-    public void setTitulo(String tit) {
-        this.Titulo = tit;
-    }
-
     public String getDescricao() {
         return Descricao;
     }
-
-    public void setDescricao(String desc) {
-        this.Descricao = desc;
+    public String getContato() {
+        return Metodo_Contato;
+    }
+    public String getTipo() {
+        return Tipo_Pub;
+    }
+    public String getImg() {
+        return Img;
     }
 
     @Override

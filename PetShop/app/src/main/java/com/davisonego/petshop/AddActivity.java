@@ -2,11 +2,20 @@ package com.davisonego.petshop;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 public class AddActivity extends AppCompatActivity {
 
@@ -18,7 +27,7 @@ public class AddActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add);
 
         Bundle extras = getIntent().getExtras();
-        if(extras!=null){
+        if (extras != null) {
             tipo = extras.getString("tipo").toString();
         }
 
@@ -33,14 +42,70 @@ public class AddActivity extends AppCompatActivity {
                 String tit = txtTitulo.getText().toString();
                 String cont = txtContato.getText().toString();
                 String desc = txtDesc.getText().toString();
+                Pet pet = new Pet(tit, desc, "Nada", tipo, cont);
 
                 // Perform operations with the input text
 
                 // Example: Display a toast message with the input values
-                Toast.makeText(AddActivity.this, "Tit : " + tit + "\nCont : " + cont + "\nDesc : " + desc, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(AddActivity.this, pet.toString(), Toast.LENGTH_SHORT).show();
+
+                try {
+                    JSONObject jsonObject = new JSONObject();
+                    jsonObject.put("Titulo", pet.getTitulo());
+                    jsonObject.put("Descricao", pet.getDescricao());
+                    jsonObject.put("Tipo_Pub", pet.getTipo());
+                    jsonObject.put("Metodo_Contato", pet.getContato());
+                    jsonObject.put("Img", pet.getImg());
+                    String jsonString = jsonObject.toString();
+                    new PostData().execute(jsonString);
+                    finish();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         });
+    }
 
+    class PostData extends AsyncTask<String, Void, String> {
 
+        @Override
+        protected String doInBackground(String... strings) {
+            try {
+
+                // on below line creating a url to post the data.
+                URL url = new URL("https://pato.requestcatcher.com/");
+
+                // on below line opening the connection.
+                HttpURLConnection client = (HttpURLConnection) url.openConnection();
+
+                // on below line setting method as post.
+                client.setRequestMethod("POST");
+
+                // on below line setting content type and accept type.
+                client.setRequestProperty("Content-Type", "application/json");
+                client.setRequestProperty("Accept", "application/json");
+
+                // on below line setting client.
+                client.setDoOutput(true);
+
+                // on below line we are creating an output stream and posting the data.
+                try (OutputStream os = client.getOutputStream()) {
+                    byte[] input = strings[0].getBytes("utf-8");
+                    os.write(input, 0, input.length);
+                }
+
+                // on below line creating and initializing buffer reader.
+                try (BufferedReader br = new BufferedReader(
+                        new InputStreamReader(client.getInputStream(), "utf-8"))) {
+                }
+
+            } catch (Exception e) {
+
+                // on below line handling the exception.
+                e.printStackTrace();
+                Toast.makeText(AddActivity.this, "Fail to post the data : " + e.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+            return null;
+        }
     }
 }

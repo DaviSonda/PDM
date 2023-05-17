@@ -4,13 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
-import android.graphics.PorterDuff;
-import android.graphics.drawable.Drawable;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import java.io.File;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 public class PerdidoActivity extends AppCompatActivity {
 
@@ -29,7 +33,11 @@ public class PerdidoActivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle(R.string.perdido);
         toolbar.setTitleTextAppearance(this, R.style.ToolbarTextAppearance);
+
+        new GetData().execute();
     }
+
+    //Chamada no onResume
 
     public void getPermission() {
         perm = new FileHelper().ReadFile(this, "login.txt");
@@ -63,6 +71,49 @@ public class PerdidoActivity extends AppCompatActivity {
             return true;
         } else {
             return super.onOptionsItemSelected(item);
+        }
+    }
+
+    class GetData extends AsyncTask<Void, Void, String> {
+        @Override
+        protected String doInBackground(Void... params) {
+            try {
+                // create URL object
+                URL url = new URL("https://reqres.in/api/users?page=2");
+
+                // create HttpURLConnection
+                HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+                conn.setRequestMethod("GET");
+
+                // read response
+                BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+                StringBuilder response = new StringBuilder();
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    response.append(line);
+                }
+                reader.close();
+
+                JSONObject obj = new JSONObject(response.toString());
+                //FOR PARA PERCORRER ARRAY DE RESPONSE
+                //A CADA LOOP CRIAR NOVO PET E ADICIONAR A LIST DE PETS
+                //RETORNAR LISTA DE PETS PARA POSTEXECUTE
+                System.out.println("AIAIAI: " + obj.getString("page"));
+                // return response
+                return response.toString();
+            } catch (Exception e) {
+                // handle exception
+                return null;
+            }
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            //ATRIBUIR LISTA DE PET AO ADAPTER
+            // handle result
+            if (result != null) {
+                System.out.println(result);
+            }
         }
     }
 }

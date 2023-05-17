@@ -6,9 +6,17 @@ import androidx.appcompat.widget.Toolbar;
 import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 public class AchadoActivity extends AppCompatActivity {
 
@@ -61,6 +69,43 @@ public class AchadoActivity extends AppCompatActivity {
             return true;
         } else {
             return super.onOptionsItemSelected(item);
+        }
+    }
+
+    class GetData extends AsyncTask<Void, Void, String> {
+        @Override
+        protected String doInBackground(Void... params) {
+            try {
+                // create URL object
+                URL url = new URL("https://reqres.in/api/users?page=2");
+
+                // create HttpURLConnection
+                HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+                System.out.println("1");
+
+                // read response
+                BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+                StringBuilder response = new StringBuilder();
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    response.append(line);
+                }
+                reader.close();
+
+                // return response
+                return response.toString();
+            } catch (Exception e) {
+                // handle exception
+                return null;
+            }
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            // handle result
+            if (result != null) {
+                System.out.println(result);
+            }
         }
     }
 }

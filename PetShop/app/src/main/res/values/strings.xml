@@ -6,4 +6,8 @@
     <string name="perdido">Perdidos</string>
     <string name="sair">Sair</string>
     <string name="add">Adicionar</string>
+    <string name="tit">Titulo</string>
+    <string name="desc">Descricao</string>
+    <string name="cont">Contato</string>
+    <string name="sbmt">Enviar</string>
 </resources>

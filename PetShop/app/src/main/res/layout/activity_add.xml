@@ -17,23 +17,22 @@
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Input 1" />
+            android:text="@string/tit" />
 
         <EditText
-            android:id="@+id/editText1"
+            android:id="@+id/txtTit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
-            tools:ignore="MissingConstraints" />
+            android:inputType="text" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Input 2" />
+            android:text="@string/desc" />
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/txtDesc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text" />
@@ -42,21 +41,21 @@
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Input 3" />
+            android:text="@string/cont" />
 
         <EditText
-            android:id="@+id/editText3"
+            android:id="@+id/txtCont"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnSbmt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
-            android:text="Submit" />
+            android:text="@string/sbmt" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
