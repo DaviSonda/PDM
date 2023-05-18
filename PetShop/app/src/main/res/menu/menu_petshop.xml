@@ -14,5 +14,5 @@
         android:id="@+id/itSair"
         android:icon="@android:drawable/ic_menu_close_clear_cancel"
         android:title="@string/sair"
-        android:titleCondensed="@string/achado"></item>
+        android:titleCondensed="@string/sair"></item>
 </menu>

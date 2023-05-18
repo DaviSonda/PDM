@@ -24,7 +24,7 @@
             android:name=".AddActivity"
             android:exported="false" />
         <activity
-            android:name=".AchadoActivity"
+            android:name=".PetshopActivity"
             android:exported="false" />
         <activity
             android:name=".PerdidoActivity"

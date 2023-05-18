@@ -19,7 +19,7 @@ import java.net.URL;
 
 public class AddActivity extends AppCompatActivity {
 
-    String tipo; //1 = Perdido, 2 = Achado
+    String tipo; //1 = Perdido/Achado, 2 = Petshop
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -6,13 +6,13 @@
         android:title="@string/add"
         android:titleCondensed="@string/add"></item>
     <item
-        android:id="@+id/itAchado"
+        android:id="@+id/itPetshop"
         android:icon="@android:drawable/ic_menu_more"
-        android:title="@string/achado"
-        android:titleCondensed="@string/achado"></item>
+        android:title="@string/petshop"
+        android:titleCondensed="@string/petshop"></item>
     <item
         android:id="@+id/itSair"
         android:icon="@android:drawable/ic_menu_close_clear_cancel"
         android:title="@string/sair"
-        android:titleCondensed="@string/achado"></item>
+        android:titleCondensed="@string/sair"></item>
 </menu>
