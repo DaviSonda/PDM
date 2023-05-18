@@ -10,4 +10,8 @@
     <string name="desc">Descricao</string>
     <string name="cont">Contato</string>
     <string name="sbmt">Enviar</string>
+    <string-array name="titOptions">
+        <item>Perdido</item>
+        <item>Achado</item>
+    </string-array>
 </resources>
