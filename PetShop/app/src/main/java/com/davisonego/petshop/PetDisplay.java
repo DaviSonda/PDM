@@ -6,12 +6,14 @@ public class PetDisplay {
     String Des;
 
     String Cont;
+    String Id;
 
-    public PetDisplay(String image, String tit, String des, String cont) {
+    public PetDisplay(String image, String tit, String des, String cont, String id) {
         img = image;
         Tit = tit;
         Des = des;
         Cont = cont;
+        Id = id;
     }
 
     public String getCont() {
@@ -24,6 +26,9 @@ public class PetDisplay {
 
     public String getTit() {
         return Tit;
+    }
+    public String getId() {
+        return Id;
     }
 
     public void setTit(String tit) {

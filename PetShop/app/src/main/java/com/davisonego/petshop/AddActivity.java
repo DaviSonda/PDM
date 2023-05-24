@@ -68,7 +68,7 @@ public class AddActivity extends AppCompatActivity {
                     JSONObject jsonObject = new JSONObject();
                     jsonObject.put("Titulo", pet.getTitulo());
                     jsonObject.put("Descricao", pet.getDescricao());
-                    jsonObject.put("Tipo_Pub", pet.getTipo());
+                    jsonObject.put("Tipo_pub", pet.getTipo());
                     jsonObject.put("Metodo_Contato", pet.getContato());
                     jsonObject.put("Img", pet.getImg());
                     String jsonString = jsonObject.toString();
@@ -88,7 +88,7 @@ public class AddActivity extends AppCompatActivity {
             try {
 
                 // on below line creating a url to post the data.
-                URL url = new URL("https://pato.requestcatcher.com/");
+                URL url = new URL("http://192.168.116.191:3000/posts");
 
                 // on below line opening the connection.
                 HttpURLConnection client = (HttpURLConnection) url.openConnection();
