@@ -83,7 +83,7 @@ public class PerdidoActivity extends AppCompatActivity {
             try {
                 // create URL object
 //                URL url = new URL("https://reqres.in/api/users?page=2");
-                URL url = new URL("http://192.168.116.191:3000/posts/tipo/1");
+                URL url = new URL(Globals.url + "/posts/tipo/1");
 
                 // create HttpURLConnection
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();

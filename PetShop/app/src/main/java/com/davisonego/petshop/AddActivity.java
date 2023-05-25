@@ -88,7 +88,7 @@ public class AddActivity extends AppCompatActivity {
             try {
 
                 // on below line creating a url to post the data.
-                URL url = new URL("http://192.168.116.191:3000/posts");
+                URL url = new URL(Globals.url + "/posts");
 
                 // on below line opening the connection.
                 HttpURLConnection client = (HttpURLConnection) url.openConnection();

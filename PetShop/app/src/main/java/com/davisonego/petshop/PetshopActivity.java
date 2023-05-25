@@ -8,13 +8,20 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
 
 public class PetshopActivity extends AppCompatActivity {
+
+    ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,12 +33,20 @@ public class PetshopActivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle(R.string.petshop);
         toolbar.setTitleTextAppearance(this, R.style.ToolbarTextAppearance);
+
+        listView = findViewById(R.id.listView);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_petshop, menu);
         return true;
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        new GetData().execute();
     }
 
     @Override
@@ -59,16 +74,17 @@ public class PetshopActivity extends AppCompatActivity {
         }
     }
 
-    class GetData extends AsyncTask<Void, Void, String> {
+    class GetData extends AsyncTask<Void, Void, ArrayList<PetDisplay>> {
         @Override
-        protected String doInBackground(Void... params) {
+        protected ArrayList<PetDisplay> doInBackground(Void... params) {
             try {
                 // create URL object
-                URL url = new URL("https://reqres.in/api/users?page=2");
+//                URL url = new URL("https://reqres.in/api/users?page=2");
+                URL url = new URL(Globals.url + "/posts/tipo/2");
 
                 // create HttpURLConnection
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-                System.out.println("1");
+                conn.setRequestMethod("GET");
 
                 // read response
                 BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
@@ -79,19 +95,39 @@ public class PetshopActivity extends AppCompatActivity {
                 }
                 reader.close();
 
-                // return response
-                return response.toString();
+                System.out.println(response.toString());
+                String res = response.toString();
+
+                JSONArray objArray = new JSONArray(res);
+                ArrayList<PetDisplay> pets = new ArrayList<>();
+                for (int i = 0; i < objArray.length(); i++) {
+                    //Pega o objeto do array
+                    JSONObject obj = objArray.getJSONObject(i);
+                    String id = obj.getString("id");
+                    String tit = obj.getString("Titulo");
+                    String desc = obj.getString("Descricao");
+                    String img = obj.getString("Img");
+                    String cont = obj.getString("Metodo_Contato");
+                    //Adiciona os pets a lista
+                    pets.add(new PetDisplay(img, tit, desc, cont, id));
+                }
+                return pets;
             } catch (Exception e) {
+                System.out.println("ERRO?");
+                System.out.println(e);
                 // handle exception
                 return null;
             }
         }
 
         @Override
-        protected void onPostExecute(String result) {
+        protected void onPostExecute(ArrayList<PetDisplay> result) {
             // handle result
             if (result != null) {
-                System.out.println(result);
+                System.out.println("CHEGUEI AMIGO");
+                System.out.println(result.size());
+                PetAdapter petAdapter = new PetAdapter(PetshopActivity.this, R.layout.list_row, result);
+                listView.setAdapter(petAdapter);
             }
         }
     }
