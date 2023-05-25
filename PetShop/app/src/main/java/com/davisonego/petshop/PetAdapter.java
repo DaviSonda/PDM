@@ -64,6 +64,8 @@ public class PetAdapter extends ArrayAdapter<PetDisplay> {
         btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Aqui vai ter o delete com o id q pegar aq
+                String id = pet.getId();
                 System.out.println("Cavlo");
             }
         });
