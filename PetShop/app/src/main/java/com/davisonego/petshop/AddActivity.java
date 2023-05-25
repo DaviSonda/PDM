@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONObject;
@@ -21,6 +22,7 @@ import java.net.URL;
 public class AddActivity extends AppCompatActivity {
 
     String tipo = "1"; //1 = Perdido/Achado, 2 = Petshop
+    String tit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,27 +34,22 @@ public class AddActivity extends AppCompatActivity {
             tipo = extras.getString("tipo").toString();
         }
 
-        EditText txtTitulo = findViewById(R.id.txtTit);
         Spinner spnTitulo = findViewById(R.id.spnTit);
         EditText txtContato = findViewById(R.id.txtCont);
         EditText txtDesc = findViewById(R.id.txtDesc);
 
-        if (tipo == "1") {
-            txtTitulo.setVisibility(View.INVISIBLE);
+        if (tipo.equals("1")) {
             spnTitulo.setVisibility(View.VISIBLE);
         } else {
             spnTitulo.setVisibility(View.INVISIBLE);
-            txtTitulo.setVisibility(View.VISIBLE);
+            tit = "Para Adoçao";
         }
 
         Button button = findViewById(R.id.btnSbmt);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String tit;
-                if ( tipo == "1") {
-                    tit = txtTitulo.getText().toString();
-                } else {
+                if (tipo.equals("1")) {
                     tit = spnTitulo.getSelectedItem().toString();
                 }
                 String cont = txtContato.getText().toString();

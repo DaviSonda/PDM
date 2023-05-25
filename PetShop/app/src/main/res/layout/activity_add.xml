@@ -12,26 +12,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="16dp">
-
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/tit" />
-
-        <EditText
-            android:id="@+id/txtTit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="invisible"
-            android:inputType="text" />
-        <Spinner
-            android:id="@+id/spnTit"
-            android:visibility="invisible"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:entries="@array/titOptions" />
-
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
@@ -56,12 +36,20 @@
             android:layout_height="wrap_content"
             android:inputType="text" />
 
+        <Spinner
+            android:id="@+id/spnTit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/titOptions"
+            android:spinnerMode="dropdown"
+            android:visibility="invisible" />
+
         <Button
             android:id="@+id/btnSbmt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="60dp"
             android:text="@string/sbmt" />
     </LinearLayout>
 
