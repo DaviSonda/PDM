@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txtNom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:text="Name"
+        />
+
+    <ImageButton
+        android:id="@+id/btnAdd"
+        android:layout_toRightOf="@+id/txtNom"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_menu_add"/>
+
+    <TextView
+        android:id="@+id/txtUF"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtNom"
+        android:maxLength="50"
+        android:singleLine="true"
+        style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        android:text="SubTitle"
+        />
+
+    <TextView
+        android:id="@+id/txtCod"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/txtNom"
+        android:maxLength="50"
+        android:singleLine="true"
+        style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        android:text="SubTitle"
+        />
+
+
+
+</RelativeLayout>

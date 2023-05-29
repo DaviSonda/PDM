@@ -6,4 +6,38 @@
     android:layout_height="match_parent"
     tools:context=".AddActivity">
 
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textCidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cidade" />
+
+        <EditText
+            android:id="@+id/txtCidade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/btnSrch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"
+            android:text="@string/srch" />
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
