@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PaisActivity">
+
+    <TextView
+        android:id="@+id/txtNom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text=""
+        android:textSize="40sp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txtMainConvert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Converter real"
+        android:textSize="18sp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/txtMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/txtMainConvertResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Resultado"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnSbmtMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:text="Converter" />
+
+    <TextView
+        android:id="@+id/txtForeignConvert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Converter moeda estrangeira"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/txtForeign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/txtForeignConvertResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Resultado"
+        android:textSize="18sp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnSbmtForeign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:text="Converter" />
+
+
+</LinearLayout>
