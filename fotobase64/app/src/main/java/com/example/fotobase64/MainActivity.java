@@ -23,6 +23,8 @@ import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 
+import com.example.fotobase64.R;
+
 import java.io.ByteArrayOutputStream;
 
 public class MainActivity extends AppCompatActivity {
