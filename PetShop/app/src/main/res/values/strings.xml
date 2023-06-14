@@ -10,6 +10,7 @@
     <string name="desc">Descricao</string>
     <string name="cont">Contato</string>
     <string name="sbmt">Enviar</string>
+    <string name="tk_picture">Tirar Foto</string>
     <string-array name="titOptions">
         <item>Perdido</item>
         <item>Achado</item>

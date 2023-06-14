@@ -12,6 +12,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="16dp">
+
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
@@ -43,6 +44,28 @@
             android:entries="@array/titOptions"
             android:spinnerMode="dropdown"
             android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="16dp"
+            android:visibility="invisible"
+            android:src="@drawable/ic_launcher_background"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/captureButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:text="@string/tk_picture"
+            tools:ignore="MissingConstraints" />
 
         <Button
             android:id="@+id/btnSbmt"
