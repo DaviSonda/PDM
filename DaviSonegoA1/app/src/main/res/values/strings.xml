@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">DaviSonegoA1</string>
+    <string name="add_city">Adicionar Cidade</string>
+    <string name="nome">Nome da Cidade</string>
+    <string name="acidente">Quantidade de Acidentes</string>
+    <string name="veiculos">Quantidade de Veiculos de Passeio</string>
+    <string name="sbmt">Salvar</string>
+    <string name="maior_acidente">A maior quantia de acidentes e: %s e pertence a cidade: %s</string>
+    <string name="menor_acidente">A maior quantia de acidentes e: %s e pertence a cidade: %s</string>
+    <string name="media_veiculo">A media de veiculos e: %s</string>
+    <string name="vazio">Nao existem dados</string>
+</resources>
