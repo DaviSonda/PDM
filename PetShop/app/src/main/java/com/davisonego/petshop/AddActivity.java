@@ -180,8 +180,8 @@ public class AddActivity extends AppCompatActivity {
             try {
 
                 // on below line creating a url to post the data.
-//                URL url = new URL(Globals.url + "/posts");
-                URL url = new URL("https://semente.requestcatcher.com/test");
+                URL url = new URL(Globals.url + "/posts");
+//                URL url = new URL("https://semente.requestcatcher.com/test");
 
                 // on below line opening the connection.
                 HttpURLConnection client = (HttpURLConnection) url.openConnection();

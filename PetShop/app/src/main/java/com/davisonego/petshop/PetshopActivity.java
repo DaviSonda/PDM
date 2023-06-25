@@ -79,7 +79,6 @@ public class PetshopActivity extends AppCompatActivity {
         protected ArrayList<PetDisplay> doInBackground(Void... params) {
             try {
                 // create URL object
-//                URL url = new URL("https://reqres.in/api/users?page=2");
                 URL url = new URL(Globals.url + "/posts/tipo/2");
 
                 // create HttpURLConnection
@@ -113,8 +112,6 @@ public class PetshopActivity extends AppCompatActivity {
                 }
                 return pets;
             } catch (Exception e) {
-                System.out.println("ERRO?");
-                System.out.println(e);
                 // handle exception
                 return null;
             }
@@ -124,8 +121,6 @@ public class PetshopActivity extends AppCompatActivity {
         protected void onPostExecute(ArrayList<PetDisplay> result) {
             // handle result
             if (result != null) {
-                System.out.println("CHEGUEI AMIGO");
-                System.out.println(result.size());
                 PetAdapter petAdapter = new PetAdapter(PetshopActivity.this, R.layout.list_row, result);
                 listView.setAdapter(petAdapter);
             }
